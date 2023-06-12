@@ -28,5 +28,7 @@ locals {
       disks = ["vda", "vdb", "vdc", "vdd"]
     }
   }
+  inter ={
+    vr = local.test_map["admin"]
+  }
 }
-
