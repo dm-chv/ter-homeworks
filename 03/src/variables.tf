@@ -30,3 +30,13 @@ variable "vpc_name" {
   default     = "develop"
   description = "VPC network&subnet name"
 }
+variable "vm_web_image_name" {
+  type = string
+  description = "ubuntu release name"
+  default = "ubuntu-2004-lts"
+}
+variable "vms_ssh_root_key" {
+  type        = string
+  default     = "<your_ssh_ed25519_key>"
+  description = "ssh-keygen -t ed25519"
+}
