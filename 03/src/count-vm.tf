@@ -5,6 +5,7 @@ resource "yandex_compute_instance" "develop" {
     cores         = 2
     memory        = 1
     core_fraction = 5
+    
   }
     boot_disk {
     initialize_params {
