@@ -1,5 +1,5 @@
 resource "yandex_compute_instance" "web" {
-    depends_on = [ yandex_vpc_network.develop ]
+    # depends_on = [ yandex_compute_instance.develop]
     for_each = {
       first = {cpu = 2, ram = 4, disk = 5}
       second = {cpu = 4, ram = 8, disk = 10}
@@ -26,3 +26,4 @@ resource "yandex_compute_instance" "web" {
     ssh-keys           = "ubuntu:${var.vms_ssh_root_key}"
   }
 }
+# depends_on = [ yandex_compute_instance.develop.name ]
