@@ -6,6 +6,7 @@ resource "yandex_compute_disk" "hdd" {
 }
 resource "yandex_compute_instance" "storage" {
     name        = "storage"
+    depends_on = [ yandex_compute_instance.develop ]
     resources {
     cores         = 2
     memory        = 1
